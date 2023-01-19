@@ -26,11 +26,7 @@
         android:id="@+id/startFragment"
         android:name="cu.ivmgjw.duwvscmwp.ui.start.StartFragment"
         android:label="fragment_start"
-        tools:layout="@layout/fragment_start" >
-        <action
-            android:id="@+id/action_startFragment_to_navigation_home"
-            app:destination="@id/navigation_home" />
-    </fragment>
+        tools:layout="@layout/fragment_start" />
     <activity
         android:id="@+id/mainActivity2"
         android:name="cu.ivmgjw.duwvscmwp.MainActivity"

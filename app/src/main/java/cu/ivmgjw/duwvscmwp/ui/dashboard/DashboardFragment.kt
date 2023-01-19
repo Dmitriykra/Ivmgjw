@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.Toast
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -30,7 +31,15 @@ class DashboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentDashboardBinding.inflate(layoutInflater)
-        moveToWebView()
+        try{
+            moveToWebView()
+        } catch (e: Exception){
+            Toast.makeText(
+                ctx,
+                "Check your internet connection, please",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
         return binding.root
     }
 

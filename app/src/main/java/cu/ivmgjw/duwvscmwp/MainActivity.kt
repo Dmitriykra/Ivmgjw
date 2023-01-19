@@ -1,14 +1,20 @@
 package cu.ivmgjw.duwvscmwp
 
+import android.app.PendingIntent.getActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.FrameLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import cu.ivmgjw.duwvscmwp.databinding.ActivityMainBinding
+import cu.ivmgjw.duwvscmwp.databinding.FragmentStartBinding
+import cu.ivmgjw.duwvscmwp.ui.start.StartFragment
 import cu.ivmgjw.duwvscmwp.webview.NetworkChecker
 
 class MainActivity : AppCompatActivity() {
