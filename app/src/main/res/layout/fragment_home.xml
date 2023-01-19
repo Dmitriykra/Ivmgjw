@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <ImageView
+        android:layout_marginStart="10dp"
+        android:id="@+id/uah_flag"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ukraine"
+        app:layout_constraintBottom_toBottomOf="@+id/uah_cb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/uah_cb" />
+
+    <CheckBox
+        android:id="@+id/uah_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/uah_flag"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_marginStart="10dp"
+        android:id="@+id/us_flag"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/usa"
+        app:layout_constraintBottom_toBottomOf="@+id/us_cb"
+        app:layout_constraintStart_toEndOf="@+id/uah_cb"
+        app:layout_constraintTop_toTopOf="@+id/us_cb" />
+
+    <CheckBox
+        android:checked="true"
+        android:id="@+id/us_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/us_flag"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_marginStart="10dp"
+        android:id="@+id/eu_flag"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/eu"
+        app:layout_constraintBottom_toBottomOf="@+id/eu_cb"
+        app:layout_constraintStart_toEndOf="@+id/us_cb"
+        app:layout_constraintTop_toTopOf="@+id/eu_cb" />
+
+    <CheckBox
+        android:id="@+id/eu_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/eu_flag"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_marginStart="10dp"
+        android:id="@+id/pzl_flag"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/poland"
+        app:layout_constraintBottom_toBottomOf="@+id/pzl_cb"
+        app:layout_constraintStart_toEndOf="@+id/eu_cb"
+        app:layout_constraintTop_toTopOf="@+id/pzl_cb" />
+
+    <CheckBox
+        android:id="@+id/pzl_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/pzl_flag"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/uah_cb" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
